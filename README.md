@@ -13,17 +13,33 @@ The structure of the dataset should be like
 Office-31
 |_ category.txt
 |_ amazon
-|  |_ <im-1-name>.jpg
+|  |_ back_pack
+|     |_ <im-1-name>.jpg
+|     |_ ...
+|     |_ <im-N-name>.jpg
+|  |_ bike
+|     |_ <im-1-name>.jpg
+|     |_ ...
+|     |_ <im-N-name>.jpg
 |  |_ ...
-|  |_ <im-N-name>.jpg
 |_ dslr
-|  |_ <im-1-name>.jpg
+|  |_ back_pack
+|     |_ <im-1-name>.jpg
+|     |_ ...
+|     |_ <im-N-name>.jpg
+|  |_ bike
+|     |_ <im-1-name>.jpg
+|     |_ ...
+|     |_ <im-N-name>.jpg
 |  |_ ...
-|  |_ <im-N-name>.jpg
-|_ webcam
-|  |_ <im-1-name>.jpg
-|  |_ ...
-|  |_ <im-N-name>.jpg
+|_ ...
+```
+The "category.txt" contains the names of all the categories, which is like
+```
+back_pack
+bike
+bike_helmet
+...
 ```
 
 ## Training

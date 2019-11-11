@@ -15,7 +15,6 @@ class SingleDomainSolver(BaseSolver):
                         resume=resume, **kwargs)
         assert(len(self.train_data) > 0), "Please specify the training domain."
         self.train_domain = list(self.train_data.keys())[0]
-        self.source_name = self.source_names[0]
 
     def solve(self):
         if self.resume:

@@ -1,15 +1,15 @@
 DATASET:
-  NUM_CLASSES: 31
-  DATAROOT: './experiments/dataset/Office-31'
+  NUM_CLASSES: 12
+  DATAROOT: './experiments/dataset/VisDA-2017/'
 
-MODEL: 
-  FEATURE_EXTRACTOR: 'resnet50'
+MODEL:
+  FEATURE_EXTRACTOR: 'resnet101'
 
 TEST:
   BATCH_SIZE: 100
-  DOMAIN: "amazon"
+  DOMAIN: "validation"
 
-EVAL_METRIC: "accuracy"
+EVAL_METRIC: "mean_accu"
 SAVE_DIR: "./experiments/ckpt"
 NUM_WORKERS: 8
 # set the path to the trained model here

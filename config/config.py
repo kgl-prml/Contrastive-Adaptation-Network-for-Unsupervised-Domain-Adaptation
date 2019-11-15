@@ -97,7 +97,7 @@ __C.MMD.KERNEL_NUM = (5, 5)
 __C.MMD.KERNEL_MUL = (2, 2)
 __C.MMD.LOSS_WEIGHT = 0.3
 __C.MMD.ALIGNMENT_FEAT_KEYS = ['feat', 'probs']
-__C.MMD.JOINT = True
+__C.MMD.JOINT = False
 
 # Testing options
 #

@@ -1,0 +1,24 @@
+DATASET:
+  NUM_CLASSES: 12
+  DATAROOT: './experiments/dataset/VisDA-2017/'
+  SOURCE_NAME: 'train'
+  TARGET_NAME: 'validation'
+
+MODEL:
+  FEATURE_EXTRACTOR: 'resnet101'
+
+TRAIN:
+  SOURCE_BATCH_SIZE: 30
+  TARGET_BATCH_SIZE: 30
+  LR_SCHEDULE: inv
+
+INV:
+  ALPHA: 0.0005
+  BETA: 2.25
+
+TEST:
+  BATCH_SIZE: 100
+
+EVAL_METRIC: "mean_accu"
+SAVE_DIR: "./experiments/ckpt"
+NUM_WORKERS: 8

@@ -1,6 +1,6 @@
 import torch
 from torch import nn
-from utils.gen_utils import to_cuda
+from utils.utils import to_cuda
 
 class MMD(object):
     def __init__(self, num_layers, kernel_num, kernel_mul, 

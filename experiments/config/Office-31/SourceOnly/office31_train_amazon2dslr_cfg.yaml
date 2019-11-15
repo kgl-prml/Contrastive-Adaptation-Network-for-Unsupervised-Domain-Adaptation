@@ -1,16 +1,18 @@
 DATASET:
   NUM_CLASSES: 31
   DATAROOT: './experiments/dataset/Office-31'
+  SOURCE_NAME: 'amazon'
+  TARGET_NAME: 'dslr'
 
 MODEL: 
   FEATURE_EXTRACTOR: 'resnet50'
 
+TRAIN:
+  SOURCE_BATCH_SIZE: 30
+
 TEST:
-  BATCH_SIZE: 100
-  DOMAIN: "amazon"
+  BATCH_SIZE: 30
 
 EVAL_METRIC: "accuracy"
 SAVE_DIR: "./experiments/ckpt"
 NUM_WORKERS: 8
-# set the path to the trained model here
-WEIGHTS: "./experiments/ckpt/${experiment_name}/ckpt_*.weights"

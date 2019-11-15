@@ -1,11 +1,9 @@
 import torch
 import torch.nn as nn
 import os
-from utils import solver_utils, data_utils, gen_utils
-from utils.gen_utils import to_cuda
+from utils.utils import to_cuda
 from torch import optim
-from data.custom_dataset_data_loader import CustomDatasetDataLoader
-from utils.data_utils import get_transform
+from data.custom_dataset_dataloader import CustomDatasetDataLoader
 from math import ceil as ceil
 from .base_solver import BaseSolver
 
@@ -52,8 +50,8 @@ class SingleDomainSolver(BaseSolver):
             source_data, source_gt = source_sample['Img'],\
                           source_sample['Label']
 
-            source_data = gen_utils.to_cuda(source_data)
-            source_gt = gen_utils.to_cuda(source_gt)
+            source_data = to_cuda(source_data)
+            source_gt = to_cuda(source_gt)
             self.net.module.set_bn_domain()
             source_preds = self.net(source_data)['logits']
 

@@ -19,7 +19,7 @@ then
 fi
 mkdir -p ${out_dir}
 
-if ${adaptated}
+if [ x${adapted} = x"True" ]
 then
   CUDA_VISIBLE_DEVICES=${gpus} python ./tools/test.py --cfg ${cfg} --adapted \
                --exp_name ${exp_name} 2>&1 | tee ${out_dir}/log.txt

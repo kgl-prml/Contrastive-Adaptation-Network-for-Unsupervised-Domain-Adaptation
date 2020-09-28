@@ -40,8 +40,11 @@ class CDD(object):
         patch = {}
         gammas = {}
         gammas['st'] = to_cuda(torch.zeros_like(dist['st'], requires_grad=False))
-        gammas['ss'] = [to_cuda(torch.zeros([num_classes], requires_grad=False))] * num_classes
-        gammas['tt'] = [to_cuda(torch.zeros([num_classes], requires_grad=False))] * num_classes
+        gammas['ss'] = [] 
+        gammas['tt'] = [] 
+        for c in range(num_classes):
+            gammas['ss'] += [to_cuda(torch.zeros([num_classes], requires_grad=False))]
+            gammas['tt'] += [to_cuda(torch.zeros([num_classes], requires_grad=False))]
 
         source_start = source_end = 0
         for ns in range(num_classes):

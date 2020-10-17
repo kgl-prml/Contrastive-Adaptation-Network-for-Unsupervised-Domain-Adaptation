@@ -1,5 +1,8 @@
 # Contrastive Adaptation Network 
-This is the Pytorch implementation for our CVPR 2019 paper [Contrastive Adaptation Network for Unsupervised Domain Adaptation](http://openaccess.thecvf.com/content_CVPR_2019/papers/Kang_Contrastive_Adaptation_Network_for_Unsupervised_Domain_Adaptation_CVPR_2019_paper.pdf). As we reorganized our code based on a new pytorch version, some hyper-parameters are slightly different from the paper.
+Update: 
+2020-10-17: We have extended our method to the multi-source domain adaptation scenario. Please refer to our TPAMI paper [Contrastive Adaptation Network for Single- and Multi-Source Domain Adaptation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9219132) for more details. We will release our code for the multi-source domain adaptation soon.
+
+2019-11: This is the Pytorch implementation for our CVPR 2019 paper [Contrastive Adaptation Network for Unsupervised Domain Adaptation](http://openaccess.thecvf.com/content_CVPR_2019/papers/Kang_Contrastive_Adaptation_Network_for_Unsupervised_Domain_Adaptation_CVPR_2019_paper.pdf). As we reorganized our code based on a new pytorch version, some hyper-parameters are slightly different from the paper.
 
 ## Requirements
 - Python 3.7
@@ -70,6 +73,13 @@ Example:
 ## Citing 
 Please cite our paper if you use our code in your research:
 ```
+@article{kangcontrastive,
+  title={Contrastive Adaptation Network for Single-and Multi-Source Domain Adaptation},
+  author={Kang, Guoliang and Jiang, Lu and Wei, Yunchao and Yang, Yi and Hauptmann, Alexander G},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  year={2020}
+}
+
 @inproceedings{kang2019contrastive,
   title={Contrastive Adaptation Network for Unsupervised Domain Adaptation},
   author={Kang, Guoliang and Jiang, Lu and Yang, Yi and Hauptmann, Alexander G},
